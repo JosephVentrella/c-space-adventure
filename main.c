@@ -12,6 +12,8 @@ int main(int argc, char** argv){
 	printf("Should I randomly choose a planet for you to visit? (Y or N)\n");
 	char randomPlanet[2];
 	fgets(randomPlanet, 25, stdin);
+	randomPlanet[strcspn(randomPlanet, "\n")]=0;
+	printf("You picked %s\n", randomPlanet);
 	printf("Traveling to Jupiter...\n");
 	printf("Arrived at Jupiter, look at those rings.\n");
 	return 0;
