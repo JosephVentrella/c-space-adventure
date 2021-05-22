@@ -1,11 +1,13 @@
 //This does nothing for now
 #include <stdio.h>
+#include <string.h>
 int main(int argc, char** argv){
 	printf("Welcome to the Solar System!\n");
 	printf("There are 9 planets to explore.\n");
 	printf("What is your name traveler?\n");
 	char name[25];
 	fgets(name, 25, stdin);
+	name[strcspn(name, "\n")] = 0;
 	printf("Nice to meet you, %s. My name is Eliza, I'm an old friend of Alexa.\n", name);
 	printf("Should I randomly choose a planet for you to visit? (Y or N)\n");
 	char randomPlanet[2];
