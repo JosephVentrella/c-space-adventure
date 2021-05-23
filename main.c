@@ -20,7 +20,13 @@ void chooseRandomPlanet(){
 	fgets(yesOrNo, 25, stdin);
 	yesOrNo[strcspn(yesOrNo, "\n")]=0;
 	printf("You picked %s\n", yesOrNo);
+	if (yesOrNo[0] == 'y'|| 'Y'){
+		printf("Traveling to Jupiter...\n");
+		printf("Arrived at Jupiter, look at those rings.\n");
+	}
 }
+
+
 int main(int argc, char** argv){
 	displayGreeting();
 	readName();
