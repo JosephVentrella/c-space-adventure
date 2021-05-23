@@ -26,7 +26,7 @@ void chooseOwnPlanet(){
 	name[strcspn(planetSelection, "\n")] = 0;
 }
 
-void chooseRandomPlanet(){
+void choosePlanet(){
 	char yesOrNo[2];
 	fgets(yesOrNo, 25, stdin);
 	yesOrNo[strcspn(yesOrNo, "\n")]=0;
@@ -45,6 +45,6 @@ int main(int argc, char** argv){
 	displayGreeting();
 	readName();
 	greetingResponse();
-	chooseRandomPlanet();
+	choosePlanet();
 	return 0;
 }
