@@ -15,14 +15,25 @@ void readName(){
 	name[strcspn(name, "\n")] = 0;
 }
 
+void travelToPlanet(){
+	printf("Traveling to Jupiter...\n");
+	printf("Arrived at Jupiter, look at those rings.\n");
+}
+
+void chooseOwnPlanet(){
+
+}
+
 void chooseRandomPlanet(){
 	char yesOrNo[2];
 	fgets(yesOrNo, 25, stdin);
 	yesOrNo[strcspn(yesOrNo, "\n")]=0;
 	printf("You picked %s\n", yesOrNo);
 	if (yesOrNo[0] == 'y'|| 'Y'){
-		printf("Traveling to Jupiter...\n");
-		printf("Arrived at Jupiter, look at those rings.\n");
+		travelToPlanet();
+	}
+	else{
+		travelToPlanet();
 	}
 }
 
@@ -32,7 +43,5 @@ int main(int argc, char** argv){
 	readName();
 	greetingResponse();
 	chooseRandomPlanet();
-	printf("Traveling to Jupiter...\n");
-	printf("Arrived at Jupiter, look at those rings.\n");
 	return 0;
 }
