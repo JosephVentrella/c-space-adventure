@@ -21,7 +21,9 @@ void travelToPlanet(){
 }
 
 void chooseOwnPlanet(){
-
+	char planetSelection[7];
+	fgets(planetSelection, 7, stdin);
+	name[strcspn(planetSelection, "\n")] = 0;
 }
 
 void chooseRandomPlanet(){
@@ -29,10 +31,11 @@ void chooseRandomPlanet(){
 	fgets(yesOrNo, 25, stdin);
 	yesOrNo[strcspn(yesOrNo, "\n")]=0;
 	printf("You picked %s\n", yesOrNo);
-	if (yesOrNo[0] == 'y'|| 'Y'){
+	if (yesOrNo[0] == 'y'|| yesOrNo[0] =='Y'){
 		travelToPlanet();
 	}
-	else{
+	else {
+		chooseOwnPlanet();
 		travelToPlanet();
 	}
 }
