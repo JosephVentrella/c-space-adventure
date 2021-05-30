@@ -1,1 +1,2 @@
-gcc main.c -omain && ./main
+gcc functions.c main.c -omain 
+./main
