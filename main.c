@@ -1,6 +1,22 @@
 #include <stdio.h>
 #include <string.h>
 char name[25];
+void displayGreeting();
+void greetingResponse();
+void readName();
+void travelToPlanet();
+void chooseOwnPlanet();
+void choosePlanet();
+
+
+int main(int argc, char** argv){
+	displayGreeting();
+	readName();
+	greetingResponse();
+	choosePlanet();
+	return 0;
+}
+
 void displayGreeting(){
 	printf("Welcome to the Solar System!\n");
 	printf("There are 9 planets to explore.\n");
@@ -14,18 +30,15 @@ void readName(){
 	fgets(name, 25, stdin);
 	name[strcspn(name, "\n")] = 0;
 }
-
 void travelToPlanet(){
 	printf("Traveling to Jupiter...\n");
 	printf("Arrived at Jupiter, look at those rings.\n");
 }
-
 void chooseOwnPlanet(){
 	char planetSelection[7];
 	fgets(planetSelection, 7, stdin);
 	name[strcspn(planetSelection, "\n")] = 0;
 }
-
 void choosePlanet(){
 	char yesOrNo[2];
 	fgets(yesOrNo, 25, stdin);
@@ -38,13 +51,4 @@ void choosePlanet(){
 		chooseOwnPlanet();
 		travelToPlanet();
 	}
-}
-
-
-int main(int argc, char** argv){
-	displayGreeting();
-	readName();
-	greetingResponse();
-	choosePlanet();
-	return 0;
 }
