@@ -17,10 +17,6 @@ void readName(){
 	fgets(name, 25, stdin);
 	name[strcspn(name, "\n")] = 0;
 }
-void travelToPlanet(){
-	printf("Traveling to Jupiter...\n");
-	printf("Arrived at Jupiter, look at those rings.\n");
-}
 void chooseOwnPlanet(){
 	int planet = 0;
 	char planetSelection[8];
@@ -38,7 +34,7 @@ void chooseOwnPlanet(){
 	else if(strcmp(planetSelection, "Mars\n") == 0){
 		planet = 4;
 	}
-	else if(strcmp(planetSelection, "Jupiter\n") == 0){
+	else if(strcmp(planetSelection, "Jupiter") == 0){
 		planet = 5;
 	}
 	else if(strcmp(planetSelection, "Saturn\n") == 0){
@@ -47,7 +43,7 @@ void chooseOwnPlanet(){
 	else if(strcmp(planetSelection, "Uranus\n") == 0){
 		planet = 7;
 	}
-	else if(strcmp(planetSelection, "Neptune\n") == 0){
+	else if(strcmp(planetSelection, "Neptune") == 0){
 		planet = 8;
 	}
 	else if(strcmp(planetSelection, "Pluto\n") == 0){
