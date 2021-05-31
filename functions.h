@@ -7,4 +7,5 @@ void travelToPlanet();
 void chooseOwnPlanet();
 void choosePlanet();
 void travelToRandomPlanet();
+void destinationPicker(int planetNumber);
 #endif

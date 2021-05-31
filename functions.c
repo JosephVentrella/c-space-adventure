@@ -50,7 +50,7 @@ void chooseOwnPlanet(){
 		int planet = 8;
 	}
 	else if(strcmp(planetSelection, "Pluto")){
-		int planet = 9
+		int planet = 9;
 	}
 }
 void choosePlanet(){
