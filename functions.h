@@ -6,4 +6,5 @@ void readName();
 void travelToPlanet();
 void chooseOwnPlanet();
 void choosePlanet();
+void travelToRandomPlanet();
 #endif

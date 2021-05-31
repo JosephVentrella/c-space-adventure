@@ -32,7 +32,7 @@ void choosePlanet(){
 	yesOrNo[strcspn(yesOrNo, "\n")]=0;
 	printf("You picked %s\n", yesOrNo);
 	if (yesOrNo[0] == 'y'|| yesOrNo[0] =='Y'){
-		travelToPlanet();
+		travelToRandomPlanet();
 	}
 	else {
 		chooseOwnPlanet();
@@ -40,6 +40,8 @@ void choosePlanet(){
 	}
 }
 void travelToRandomPlanet(){
+	time_t t;
+	srand((unsigned) time(&t));
 	int planet = rand() % 10;
 	switch(planet){
 		case 1:
