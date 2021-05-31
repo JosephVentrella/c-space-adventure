@@ -25,6 +25,33 @@ void chooseOwnPlanet(){
 	char planetSelection[7];
 	fgets(planetSelection, 7, stdin);
 	name[strcspn(planetSelection, "\n")] = 0;
+	if(strcmp(planetSelection, "Mercury")){
+		int planet = 1;
+	}
+	else if(strcmp(planetSelection, "Venus")){
+		int planet = 2;
+	}
+	else if(strcmp(planetSelection, "Earth")){
+		int planet = 3;
+	}
+	else if(strcmp(planetSelection, "Mars")){
+		int planet = 4;
+	}
+	else if(strcmp(planetSelection, "Jupiter")){
+		int planet = 5;
+	}
+	else if(strcmp(planetSelection, "Saturn")){
+		int planet = 6;
+	}
+	else if(strcmp(planetSelection, "Uranus")){
+		int planet = 7;
+	}
+	else if(strcmp(planetSelection, "Neptune")){
+		int planet = 8;
+	}
+	else if(strcmp(planetSelection, "Pluto")){
+		int planet = 9
+	}
 }
 void choosePlanet(){
 	char yesOrNo[2];
@@ -35,6 +62,7 @@ void choosePlanet(){
 		travelToRandomPlanet();
 	}
 	else {
+		printf("Choose a planet: ");
 		chooseOwnPlanet();
 		travelToPlanet();
 	}
