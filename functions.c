@@ -24,33 +24,34 @@ void chooseOwnPlanet(){
 	fgets(planetSelection, 8, stdin);
 	name[strcspn(planetSelection, "\n")] = 0;
 	if(strcmp(planetSelection, "Mercury") == 0){
-		planet = 1;
+		planet = 0;
 	}
 	else if(strcmp(planetSelection, "Venus\n")== 0){
-		planet = 2;
+		planet = 1;
 	}
 	else if(strcmp(planetSelection, "Earth\n") == 0){
-		planet = 3;
+		planet = 2;
 	}
 	else if(strcmp(planetSelection, "Mars\n") == 0){
-		planet = 4;
+		planet = 3;
 	}
 	else if(strcmp(planetSelection, "Jupiter") == 0){
-		planet = 5;
+		planet = 4;
 	}
 	else if(strcmp(planetSelection, "Saturn\n") == 0){
-		planet = 6;
+		planet = 5;
 	}
 	else if(strcmp(planetSelection, "Uranus\n") == 0){
-		planet = 7;
+		planet = 6;
 	}
 	else if(strcmp(planetSelection, "Neptune") == 0){
-		planet = 8;
+		planet = 7;
 	}
 	else if(strcmp(planetSelection, "Pluto\n") == 0){
-		planet = 9;
+		planet = 8;
 	}
-	destinationPicker(planet);
+	//destinationPicker(planet);
+	jsonHandler(planet);
 }
 void choosePlanet(){
 	char yesOrNo[2];
@@ -72,7 +73,7 @@ void travelToRandomPlanet(){
 	if(planet == 0){
 		planet += 1;
 	}
-	destinationPicker(planet);
+	jsonHandler(planet);
 }
 void destinationPicker(int planetNumber){
 	switch(planetNumber){
