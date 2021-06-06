@@ -69,59 +69,10 @@ void choosePlanet(){
 void travelToRandomPlanet(){
 	time_t t;
 	srand((unsigned) time(&t));
-	int planet = rand() % 10;
-	if(planet == 0){
-		planet += 1;
-	}
+	int planet = rand() % 9;
 	jsonHandler(planet);
 }
-void destinationPicker(int planetNumber){
-	switch(planetNumber){
-		case 1://Mercury
-			printf("Traveling to Mercury.\n");
-			printf("Arrived at Mercury.\n");
-			printf("Look how big the sun looks from here.\n");
-			break;
-		case 2://Venus
-			printf("Traveling to Venus.\n");
-			printf("Arrived at Venus.\n");
-			printf("Its hard to breathe with all the clouds here.\n");
-			break;
-		case 3://Earth
-			printf("Traveling to Earth.\n");
-			printf("Arrived at Earth.\n");
-			printf("This place looks familiar.\n");
-			break;
-		case 4://Mars
-			printf("Traveling to Mars.\n");
-			printf("Arrived at Mars.\n");
-			break;
-		case 5://Jupiter
-			printf("Traveling to Jupiter...\n");
-			printf("Arrived at Jupiter, look at those rings.\n");
-			break;
-		case 6://Saturn
-			printf("Traveling to Saturn.\n");
-			printf("Arrived at Saturn.\n");
-			printf("I dont know anything about this planet.\n");
-			break;
-		case 7://Uranus
-			printf("Traveling to Uranus.\n");
-			printf("Arrived at Uranus.\n");
-			printf("No jokes please.\n");
-			break;
-		case 8://Neptune
-			printf("Traveling to Neptune.\n");
-			printf("Arrived at Neptune.\n");
-			printf("Brrrrr its cold.\n");
-			break;
-		case 9://Pluto
-			printf("Traveling to Pluto.\n");
-			printf("Arrived at Pluto.\n");
-			printf("I dont care what they say it is definitely a planet.\n");
-			break;
-	}
-}
+
 void jsonHandler(int planetNumber){
 	FILE *fp;
 	char buffer[1024];

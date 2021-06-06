@@ -6,6 +6,5 @@ void readName();
 void chooseOwnPlanet();
 void choosePlanet();
 void travelToRandomPlanet();
-void destinationPicker(int planetNumber);
 void jsonHandler(int planetNumber);
 #endif
