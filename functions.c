@@ -63,8 +63,7 @@ void chooseOwnPlanet(){
 		printf("Please input a valid planet name.\n");
 		chooseOwnPlanet();
 	}
-	//destinationPicker(planet);
-	//jsonHandler(planet);
+
 }
 void choosePlanet(){
 	char yesOrNo[25];
