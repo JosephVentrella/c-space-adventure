@@ -1,2 +1,2 @@
-gcc functions.c main.c -omain 
+gcc functions.c main.c -ljson-c -omain 
 ./main

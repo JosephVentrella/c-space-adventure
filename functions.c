@@ -3,6 +3,7 @@
 #include "functions.h"
 #include <stdlib.h>
 #include <time.h>
+#include <json-c/json.h>
 char name[25];
 void displayGreeting(){
 	printf("Welcome to the Solar System!\n");
@@ -119,4 +120,18 @@ void destinationPicker(int planetNumber){
 			printf("I dont care what they say it is definitely a planet.\n");
 			break;
 	}
+}
+void jsonHandler(int planetNumber){
+	FILE *fp;
+	char buffer[2048];
+	struct json_object *parsed_json;
+	struct json_object *planets;
+	struct json_object *planet;
+	struct json_object *descriptions;
+	struct json_object *description;
+	size_t n_planets;
+
+	fp = fopen("planetarySystem.json","r");
+	fread(buffer, 2048, 1, fp);
+	fclose(fp);
 }

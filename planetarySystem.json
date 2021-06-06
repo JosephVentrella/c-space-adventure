@@ -1,41 +1,16 @@
 {
     "name": "Solar System",
-    "planets": [
-        {
-            "name": "Mercury",
-            "description": "A very hot planet, closest to the sun."
-        },
-        {
-            "name": "Venus",
-            "description": "It's very cloudy here!"
-        },
-        {
-            "name": "Earth",
-            "description": "There is something very familiar about this planet."
-        },
-        {
-            "name": "Mars",
-            "description": "Known as the red planet."
-        },
-        {
-            "name": "Jupiter",
-            "description": "A gas giant, with a noticeable red spot."
-        },
-        {
-            "name": "Saturn",
-            "description": "This planet has beautiful rings around it."
-        },
-        {
-            "name": "Uranus",
-            "description": "Strangely, this planet rotates around on its side."
-        },
-        {
-            "name": "Neptune",
-            "description": "A very cold planet, furthest from the sun."
-        },
-        {
-            "name": "Pluto",
-            "description": "I don't care what they say - it's a planet."
-        }
-    ]
+    "planets": ["Mercury","Venus","Earth","Mars",
+        "Jupiter","Saturn","Uranus","Neptune",
+        "Pluto"],
+    "descriptions": [ 
+        "A very hot planet, closest to the sun.",
+        "It's very cloudy here!", "There is something very familiar about this planet.",
+        "Known as the red planet.", "A gas giant, with a noticeable red spot.",
+        "This planet has beautiful rings around it.","Strangely, this planet rotates around on its side.",
+        "A very cold planet, furthest from the sun.","I don't care what they say - it's a planet."
+    ] 
 }
+
+
+ 
