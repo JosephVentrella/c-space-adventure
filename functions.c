@@ -25,45 +25,62 @@ void chooseOwnPlanet(){
 	name[strcspn(planetSelection, "\n")] = 0;
 	if(strcmp(planetSelection, "Mercury") == 0){
 		planet = 0;
+		jsonHandler(planet);
 	}
 	else if(strcmp(planetSelection, "Venus\n")== 0){
 		planet = 1;
+		jsonHandler(planet);
 	}
 	else if(strcmp(planetSelection, "Earth\n") == 0){
 		planet = 2;
+		jsonHandler(planet);
 	}
 	else if(strcmp(planetSelection, "Mars\n") == 0){
 		planet = 3;
+		jsonHandler(planet);
 	}
 	else if(strcmp(planetSelection, "Jupiter") == 0){
 		planet = 4;
+		jsonHandler(planet);
 	}
 	else if(strcmp(planetSelection, "Saturn\n") == 0){
 		planet = 5;
+		jsonHandler(planet);
 	}
 	else if(strcmp(planetSelection, "Uranus\n") == 0){
 		planet = 6;
+		jsonHandler(planet);
 	}
 	else if(strcmp(planetSelection, "Neptune") == 0){
 		planet = 7;
+		jsonHandler(planet);
 	}
 	else if(strcmp(planetSelection, "Pluto\n") == 0){
 		planet = 8;
+		jsonHandler(planet);
+	}
+	else {
+		printf("Please input a valid planet name.\n");
+		chooseOwnPlanet();
 	}
 	//destinationPicker(planet);
-	jsonHandler(planet);
+	//jsonHandler(planet);
 }
 void choosePlanet(){
-	char yesOrNo[2];
+	char yesOrNo[25];
 	fgets(yesOrNo, 25, stdin);
 	yesOrNo[strcspn(yesOrNo, "\n")]=0;
 	printf("You picked %s\n", yesOrNo);
 	if (yesOrNo[0] == 'y'|| yesOrNo[0] =='Y'){
 		travelToRandomPlanet();
 	}
-	else {
+	else if(yesOrNo[0] == 'n' || yesOrNo[0]== 'N') {
 		printf("Choose a planet: ");
 		chooseOwnPlanet();
+	}
+	else{
+		printf("Should I randomly choose a planet for you to visit? (Y or N)\n");
+		choosePlanet();
 	}
 }
 void travelToRandomPlanet(){
