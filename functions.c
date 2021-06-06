@@ -123,7 +123,7 @@ void destinationPicker(int planetNumber){
 }
 void jsonHandler(int planetNumber){
 	FILE *fp;
-	char buffer[2048];
+	char buffer[1024];
 	struct json_object *parsed_json;
 	struct json_object *planets;
 	struct json_object *planet;
@@ -132,6 +132,14 @@ void jsonHandler(int planetNumber){
 	size_t n_planets;
 
 	fp = fopen("planetarySystem.json","r");
-	fread(buffer, 2048, 1, fp);
+	fread(buffer, 1024, 1, fp);
 	fclose(fp);
+	parsed_json = json_tokener_parse(buffer);
+	json_object_object_get_ex(parsed_json, "planets", &planets);
+	json_object_object_get_ex(parsed_json, "descriptions", &descriptions);
+	n_planets = json_object_array_length(planets);
+	planet = json_object_array_get_idx(planets, planetNumber);
+	description = json_object_array_get_idx(descriptions, planetNumber);
+	printf("Traveling to %s...\n", json_object_get_string(planet));
+	printf("%s\n", json_object_get_string(description));
 }
